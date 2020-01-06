@@ -17,7 +17,7 @@ an useful collection of utils for mongodb operations
     } catch(err) {
         console.error(err);
     }
-    closeDatabase(database);
+    await closeDatabase(database);
 
 ## note
 

@@ -28,7 +28,7 @@ describe('test openDatabase and closeDatabase', () => {
         } catch(err) {
             console.error(err);
         }
-        closeDatabase(database);
+        await closeDatabase(database);
     });
 });
 
