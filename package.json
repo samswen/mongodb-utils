@@ -1,0 +1,37 @@
+{
+  "name": "@samwen/mongodb-utils",
+  "version": "1.0.0",
+  "description": "an useful collection of utils for mongodb operations",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samswen/mongodb-utils.git"
+  },
+  "keywords": [
+    "monogodb",
+    "utils",
+    "openDatabase",
+    "closeDatabase"
+  ],
+  "author": "Sam Wen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samswen/mongodb-utils/issues"
+  },
+  "homepage": "https://github.com/samswen/mongodb-utils#readme",
+  "dependencies": {
+    "mongodb": "^3.4.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "mocha": "^6.2.2",
+    "sinon": "^8.0.2"
+  }
+}
