@@ -11,13 +11,13 @@ an useful collection of utils for mongodb operations
     const { openDatabase, closeDatabase} = require('@samwen/mongodb-utils');
     const mongodb_url = 'mongodb://username:password@database.domain.com/database?tls=true';
     
-    const database = await openDatabase(mongodb_url);
     try {
+        const database = await openDatabase(mongodb_url);
         await database.collection('test_collection').insertOne({started_at: Date.now(), key: 'test value'});
     } catch(err) {
         console.error(err);
     }
-    await closeDatabase(database);
+    await closeDatabase();
 
 ## note
 
