@@ -20,18 +20,13 @@ async function openDatabase(mongodb_url) {
         await closeDatabase();
     }
 
-    try {
-        url = mongodb_url;
-        client = await MongoClient.connect(url, { 
-            useNewUrlParser: true, 
-            useUnifiedTopology: true, 
-        });
-        database = client.db();
-        return database;
-    } catch(err) {
-        console.error(err);
-    }
-    return null;
+    url = mongodb_url;
+    client = await MongoClient.connect(url, { 
+        useNewUrlParser: true, 
+        useUnifiedTopology: true, 
+    });
+    database = client.db();
+    return database;
 }
 
 async function closeDatabase() {
