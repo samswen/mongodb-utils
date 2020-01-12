@@ -3,6 +3,7 @@
 const MongoClient = require('mongodb').MongoClient;
 
 module.exports = {
+    getMongoClient,
     openDatabase,
     closeDatabase
 };
@@ -11,15 +12,14 @@ let url = null;
 let client = null;
 let database = null;
 
+function getMongoClient() {
+    return client;
+}
+
 async function openDatabase(mongodb_url) {
-
-    if (url && url === mongodb_url && database) {
-        return database;
+    if (url && url === mongodb_url && client) {
+        return client;
     }
-    if (!client) {
-        await closeDatabase();
-    }
-
     url = mongodb_url;
     client = await MongoClient.connect(url, { 
         useNewUrlParser: true, 
@@ -30,16 +30,14 @@ async function openDatabase(mongodb_url) {
 }
 
 async function closeDatabase() {
-
+    url = null;
+    database = null;
     if (!client) {
-        database = null;
         return;
     }
     try {
         await client.close();
-        url = null;
         client = null;
-        database = null;
     } catch (err) {
         console.error(err);
     }

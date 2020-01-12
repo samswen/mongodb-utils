@@ -1,6 +1,6 @@
 {
   "name": "@samwen/mongodb-utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "an useful collection of utils for mongodb operations",
   "main": "src/index.js",
   "directories": {

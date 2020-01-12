@@ -8,7 +8,7 @@ an useful collection of utils for mongodb operations
 
 ## how to use
 
-    const { openDatabase, closeDatabase} = require('@samwen/mongodb-utils');
+    const { openDatabase, closeDatabase } = require('@samwen/mongodb-utils');
     const mongodb_url = 'mongodb://username:password@database.domain.com/database?tls=true';
     
     try {
