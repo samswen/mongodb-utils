@@ -17,8 +17,8 @@ function getMongoClient() {
 }
 
 async function openDatabase(mongodb_url) {
-    if (url && url === mongodb_url && client) {
-        return client;
+    if (database && client && url && url === mongodb_url) {
+        return database;
     }
     url = mongodb_url;
     client = await MongoClient.connect(url, { 
