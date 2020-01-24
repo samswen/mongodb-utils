@@ -1,6 +1,6 @@
 {
   "name": "@samwen/mongodb-utils",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "an useful collection of utils for mongodb operations",
   "main": "src/index.js",
   "directories": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/samswen/mongodb-utils#readme",
   "dependencies": {
-    "mongodb": "^3.4.1"
+    "mongodb": "^3.5.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",

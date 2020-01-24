@@ -16,14 +16,15 @@ function getMongoClient() {
     return client;
 }
 
-async function openDatabase(mongodb_url) {
+async function openDatabase(mongodb_url, min_size = 4, pool_size = 16) {
     if (database && client && url && url === mongodb_url) {
         return database;
     }
     url = mongodb_url;
     client = await MongoClient.connect(url, { 
-        useNewUrlParser: true, 
-        useUnifiedTopology: true, 
+        useUnifiedTopology: true,
+        minSize: min_size,
+        poolSize: pool_size,
     });
     database = client.db();
     return database;

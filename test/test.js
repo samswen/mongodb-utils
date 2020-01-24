@@ -7,7 +7,8 @@ const chai = require('chai');
 const assert = chai.assert;
 const expect = chai.expect;
 
-const mongodb_url = 'mongodb://username:password@database.domain.com/database?tls=true';
+//const mongodb_url = 'mongodb://username:password@database.domain.com/database?tls=true';
+const mongodb_url = 'mongodb://localhost/testdb?tls=false';
 
 describe('test openDatabase and closeDatabase', () => {
 
